@@ -7,6 +7,7 @@ import { TextGenerateEffect } from '@/components/ui/text-generate-effect'
 import { TextHoverEffect } from '@/components/ui/text-hover-effect'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
+import Resume from './Resume'
 
 export default function Home() {
   return (
@@ -166,7 +167,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="h-[1820px] mt-14 pt-14 px-8 flex flex-col items-center w-full">
+        <div className="mt-14 pt-14 px-8 flex flex-col items-center w-full">
           <span className="text-white mt-4 pt-4 italic font-[family-name:var(--font-geist-mono)]">
             Experience
           </span>
@@ -197,10 +198,13 @@ export default function Home() {
               </LinkPreview>
             </div>
           </div>
-
-          <span className="text-white mt-4 pt-4 italic font-[family-name:var(--font-geist-mono)]">
+        </div>
+        <div className="w-full flex flex-col items-center">
+          <span className="text-white mt-4 pt-4 italic font-[family-name:var(--font-geist-mono)] pb-4">
             Resume
           </span>
+
+          <Resume />
         </div>
       </main>
     </div>
