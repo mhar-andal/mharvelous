@@ -178,7 +178,7 @@ export default function Home() {
                 url="https://varsitytutors.com"
                 className="font-bold bg-clip-text text-transparent bg-gradient-to-br from-purple-500 to-pink-500"
               >
-                Varsity Tutors (2022 - 2024)
+                Varsity Tutors - $NRDY (2022 - 2024)
               </LinkPreview>
             </div>
             <div>
@@ -186,7 +186,7 @@ export default function Home() {
                 url="https://codeverse.com"
                 className="font-bold bg-clip-text text-transparent bg-gradient-to-br from-purple-500 to-pink-500"
               >
-                Codeverse (2018 - 2022)
+                Codeverse - Acquired by $NRDY (2018 - 2022)
               </LinkPreview>
             </div>
             <div>
