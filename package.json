@@ -7,6 +7,7 @@
     "dev": "next dev --turbopack -p 3001",
     "build": "next build",
     "start": "next start",
+    "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,json,css,scss,md}\"",
     "lint": "next lint"
   },
   "dependencies": {
@@ -21,6 +22,7 @@
     "lucide-react": "^0.462.0",
     "next": "15.0.3",
     "pdfjs-dist": "4.4.168",
+    "prettier": "^3.4.1",
     "qss": "^3.0.0",
     "react": "19.0.0-rc-66855b96-20241106",
     "react-dom": "19.0.0-rc-66855b96-20241106",
@@ -32,6 +34,7 @@
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "@typescript-eslint/eslint-plugin": "latest",
     "eslint": "^8.57.1",
     "eslint-config-next": "15.0.3",
     "eslint-config-prettier": "^9.1.0",
@@ -42,7 +45,6 @@
     "eslint-plugin-sort-destructure-keys": "^2.0.0",
     "eslint-plugin-sort-keys": "^2.3.5",
     "eslint-plugin-sort-keys-custom-order": "^2.2.0",
-    "@typescript-eslint/eslint-plugin": "latest",
     "postcss": "^8",
     "prettier-eslint": "^16.3.0",
     "tailwindcss": "^3.4.1",
