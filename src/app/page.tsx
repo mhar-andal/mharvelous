@@ -199,13 +199,13 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="w-full flex flex-col items-center">
+        {/* <div className="w-full flex flex-col items-center">
           <span className="text-white mt-4 pt-4 italic font-[family-name:var(--font-geist-mono)] pb-4">
             Resume
           </span>
 
           <Resume />
-        </div>
+        </div> */}
       </main>
     </div>
   )
