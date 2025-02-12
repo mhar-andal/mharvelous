@@ -251,9 +251,9 @@ function Experience() {
 
           <LinkPreview
             url="https://www.youtube.com/watch?v=2iWkHxB-4xU"
-            className="font-bold bg-clip-text text-transparent bg-linear-to-br from-purple-500 to-pink-500"
+            className="font-bold bg-clip-text text-transparent bg-linear-to-br from-purple-500 to-pink-500 text-lg py-4"
           >
-            See it in action
+            Click here to see it in action
           </LinkPreview>
 
           <div className="grid grid-cols-2 gap-12">
