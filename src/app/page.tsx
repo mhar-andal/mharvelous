@@ -195,7 +195,7 @@ function Description() {
       </p>
 
       <span className="text-sm text-white mt-4 pt-4 italic font-[family-name:var(--font-geist-mono)]">
-        Some of the companies I've worked at:
+        Some of the companies I&apos;ve worked at:
       </span>
 
       <div className="text-white text-sm font-[family-name:var(--font-geist-mono)] py-2">
@@ -244,9 +244,9 @@ function Experience() {
           <p className="pb-4">
             Codeverse is an online platform and community where kids ages 6-13
             bring ideas to life by creating their own apps and games. Powered by
-            KidScript — the world's first coding language created just for kids
-            — Codeverse teaches foundational coding concepts alongside critical
-            thinking, collaboration and creativity.
+            KidScript — the world&apos;s first coding language created just for
+            kids — Codeverse teaches foundational coding concepts alongside
+            critical thinking, collaboration and creativity.
           </p>
 
           <LinkPreview
