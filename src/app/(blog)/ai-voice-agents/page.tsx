@@ -107,8 +107,8 @@ if __name__ == "__main__":
           how to build the voice ai agent
         </h2>
         <div>
-          To start, we'll need to setup a simple voice agent running locally.
-          You can refer to the{' '}
+          To start, we&apos;ll need to setup a simple voice agent running
+          locally. You can refer to the{' '}
           <LinkPreview
             url="https://github.com/pipecat-ai/pipecat?tab=readme-ov-file#a-simple-voice-agent-running-locally"
             className="font-bold bg-clip-text text-transparent bg-linear-to-br from-purple-500 to-pink-500"
