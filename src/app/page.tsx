@@ -249,12 +249,14 @@ function Experience() {
             critical thinking, collaboration and creativity.
           </p>
 
-          <LinkPreview
-            url="https://www.youtube.com/watch?v=2iWkHxB-4xU"
-            className="font-bold bg-clip-text text-transparent bg-linear-to-br from-purple-500 to-pink-500 text-lg py-6"
-          >
-            Click here to see it in action
-          </LinkPreview>
+          <div className="py-6">
+            <LinkPreview
+              url="https://www.youtube.com/watch?v=2iWkHxB-4xU"
+              className="font-bold bg-clip-text text-transparent bg-linear-to-br from-purple-500 to-pink-500 text-lg "
+            >
+              Click here to see it in action
+            </LinkPreview>
+          </div>
 
           <div className="grid grid-cols-2 gap-12">
             <div className="w-full h-full flex items-center justify-center">
