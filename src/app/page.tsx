@@ -1,6 +1,7 @@
 'use client'
 
 import { LinkPreview } from '@/components/ui/link-preview'
+import Link from 'next/link'
 import { SparklesCore } from '@/components/ui/sparkles'
 import { TextGenerateEffect } from '@/components/ui/text-generate-effect'
 import { TextHoverEffect } from '@/components/ui/text-hover-effect'
@@ -16,7 +17,7 @@ import { useEffect, useRef, useState } from 'react'
 
 function Section() {
   return (
-    <div className="w-screen h-screen snap-center relative snap-always snap-mandatory">
+    <section className="w-screen h-screen snap-center relative snap-always snap-mandatory">
       <TextHoverEffect text={'MHAR ANDAL'} />
       <div className="absolute top-[60%] flex flex-col items-center justify-center w-full">
         <TextGenerateEffect
@@ -170,13 +171,13 @@ function Section() {
           <div className="absolute inset-0 w-full h-full bg-black [mask-image:radial-gradient(350px_200px_at_top,transparent_20%,white)]"></div>
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 
 function Description() {
   return (
-    <div className="flex flex-col items-center h-screen w-screen snap-center snap-always snap-mandatory pt-11">
+    <section className="flex flex-col items-center h-screen w-screen snap-center snap-always snap-mandatory pt-11">
       <Image
         src="/mhar_avatar_photo.jpeg"
         alt="Mhar"
@@ -199,6 +200,14 @@ function Description() {
       </span>
 
       <div className="text-white text-sm font-[family-name:var(--font-geist-mono)] py-2">
+        <div>
+          <LinkPreview
+            url="https://joinender.com"
+            className="font-bold bg-clip-text text-transparent bg-linear-to-br from-purple-500 to-pink-500"
+          >
+            Ender - Acquired by SchoolAI (2024)
+          </LinkPreview>
+        </div>
         <div>
           <LinkPreview
             url="https://varsitytutors.com"
@@ -224,13 +233,13 @@ function Description() {
           </LinkPreview>
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 
 function Experience() {
   return (
-    <div className="flex flex-col items-center h-screen w-screen snap-center snap-always snap-mandatory">
+    <section className="flex flex-col items-center h-screen w-screen snap-center snap-always snap-mandatory">
       <div className="flex flex-col items-center justify-center pt-11">
         <h1 className="text-white text-2xl font-[family-name:var(--font-geist-mono)]">
           <motion.img
@@ -240,7 +249,7 @@ function Experience() {
             className="w-full h-full pb-4"
           />
         </h1>
-        <div className="text-white text-xs font-[family-name:var(--font-geist-mono)] py-2 px-4 md:px-8 lg:px-32 max-w-4xl text-center">
+        <div className="text-white text-xs lg:text-sm font-[family-name:var(--font-geist-mono)] py-2 px-4 md:px-8 lg:px-32 max-w-4xl text-center">
           <p className="pb-4">
             Codeverse is an online platform and community where kids ages 6-13
             bring ideas to life by creating their own apps and games. Powered by
@@ -249,28 +258,53 @@ function Experience() {
             critical thinking, collaboration and creativity.
           </p>
 
+          <p className="pt-6">
+            I joined Codeverse as an early engineer in 2018 during their Series
+            A round with a mission to build and scale the best interactive
+            coding studio&apos;s across the nation.
+          </p>
+
+          <p className="pt-6">
+            During the pandemic, the dream to scale the studios was put on hold.
+            I helped transition the product to an online platform, unlocking new
+            opportunities for kids to learn to code from anywhere in the world.
+          </p>
+
+          <div className="pt-6">
+            We built a platform with features like live coding, in app video
+            conferencing, social platform, and a large coding curriculum - we
+            got acquired by{' '}
+            <LinkPreview
+              url="https://varsitytutors.com"
+              className="font-bold bg-clip-text text-transparent bg-linear-to-br from-purple-500 to-pink-500"
+            >
+              Varsity Tutors
+            </LinkPreview>{' '}
+            to bring Codeverse to the k-12 school market.
+          </div>
+
           <div className="py-6">
             <LinkPreview
               url="https://www.youtube.com/watch?v=2iWkHxB-4xU"
               className="font-bold bg-clip-text text-transparent bg-linear-to-br from-purple-500 to-pink-500 text-lg "
             >
-              Click here to see it in action
+              Click here to see the product in action
             </LinkPreview>
           </div>
 
-          <div className="grid grid-cols-2 gap-12">
+          <div className="grid lg:grid-cols-4 grid-cols-2 sm:grid-cols-3 gap-12">
             <div className="w-full h-full flex items-center justify-center">
               <motion.img
                 src="/codeverse_product.png"
                 alt="Codeverse"
-                whileHover={{ scale: 2 }}
+                whileHover={{ scale: 4 }}
               />
             </div>
             <div className="w-full h-full flex items-center justify-center">
               <motion.img
                 src="/codeverse-studio.png"
                 alt="Codeverse2"
-                whileHover={{ scale: 2 }}
+                whileHover={{ scale: 4 }}
               />
             </div>
 
@@ -278,52 +312,74 @@ function Experience() {
               <motion.img
                 src="/image2.png"
                 alt="Codeverse2"
-                whileHover={{ scale: 2, y: -100 }}
+                whileHover={{ scale: 4, y: -50 }}
               />
             </div>
             <div className="w-full h-full flex items-center justify-center">
               <motion.img
                 src="/image3.png"
                 alt="Codeverse2"
-                whileHover={{ scale: 2, y: -100 }}
+                whileHover={{ scale: 4, y: -50 }}
               />
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 
 function Links() {
   return (
-    <div className="py-8 h-screen w-screen snap-center snap-always snap-mandatory">
-      <h1 className="text-white text-2xl font-[family-name:var(--font-geist-mono)] text-center">
-        Links
-      </h1>
-      <div className="flex flex-col items-center justify-center">
-        <div className="grid grid-cols-2 gap-4 justify-center pt-4">
-          <LinkPreview
-            url="https://github.com/mhar-andal"
-            className="font-bold bg-clip-text text-transparent bg-linear-to-br from-purple-500 to-pink-500"
-          >
-            GitHub
-          </LinkPreview>
-          <LinkPreview
-            url="https://www.linkedin.com/in/mharandal/"
-            className="font-bold bg-clip-text text-transparent bg-linear-to-br from-purple-500 to-pink-500"
-          >
-            LinkedIn
-          </LinkPreview>
+    <section
+      className="py-8 h-screen w-screen snap-center snap-always snap-mandatory"
+      id="links"
+    >
+      <div>
+        <h1 className="text-white text-2xl font-[family-name:var(--font-geist-mono)] text-center">
+          Links
+        </h1>
+        <div className="flex flex-col items-center justify-center">
+          <div className="grid grid-cols-2 gap-4 justify-center pt-4">
+            <LinkPreview
+              url="https://github.com/mhar-andal"
+              className="font-bold bg-clip-text text-transparent bg-linear-to-br from-purple-500 to-pink-500"
+            >
+              GitHub
+            </LinkPreview>
+            <LinkPreview
+              url="https://www.linkedin.com/in/mharandal/"
+              className="font-bold bg-clip-text text-transparent bg-linear-to-br from-purple-500 to-pink-500"
+            >
+              LinkedIn
+            </LinkPreview>
+          </div>
         </div>
-        {/* <LinkPreview
-          url="/blog"
-          className="font-bold bg-clip-text text-transparent bg-linear-to-br from-purple-500 to-pink-500 pt-4"
-        >
-          Blog
-        </LinkPreview> */}
       </div>
-    </div>
+
+      {/* <div className="pt-8">
+        <h1 className="text-white text-2xl font-[family-name:var(--font-geist-mono)] text-center pt-4">
+          Posts
+        </h1>
+        <div className="flex flex-col items-center justify-center">
+          <div className="flex flex-col justify-center pt-4">
+            <Link
+              href="/ai-voice-agents"
+              scroll
+              className="font-bold bg-clip-text text-transparent bg-linear-to-br from-purple-500 to-pink-500"
+            >
+              How I built a prototype for a Voice AI Assistant
+            </Link>
+            <Link
+              href="/test"
+              className="font-bold bg-clip-text text-transparent bg-linear-to-br from-purple-500 to-pink-500"
+            >
+              Test
+            </Link>
+          </div>
+        </div>
+      </div> */}
+    </section>
   )
 }
 

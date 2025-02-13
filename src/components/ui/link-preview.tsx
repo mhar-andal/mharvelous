@@ -39,15 +39,15 @@ export const LinkPreview = ({
   let src
   if (!isStatic) {
     const params = encode({
-      url,
-      screenshot: true,
-      meta: false,
-      embed: 'screenshot.url',
       colorScheme: 'dark',
-      'viewport.isMobile': true,
+      embed: 'screenshot.url',
+      meta: false,
+      screenshot: true,
+      url,
       'viewport.deviceScaleFactor': 1,
-      'viewport.width': width * 3,
       'viewport.height': height * 3,
+      'viewport.isMobile': true,
+      'viewport.width': width * 3,
     })
     src = `https://api.microlink.io/?${params}`
   } else {
@@ -62,7 +62,7 @@ export const LinkPreview = ({
     setIsMounted(true)
   }, [])
 
-  const springConfig = { stiffness: 100, damping: 15 }
+  const springConfig = { damping: 15, stiffness: 100 }
   const x = useMotionValue(0)
 
   const translateX = useSpring(x, springConfig)
@@ -101,6 +101,7 @@ export const LinkPreview = ({
           onMouseMove={handleMouseMove}
           className={cn('text-black dark:text-white', className)}
           href={url}
+          target="_blank"
         >
           {children}
         </HoverCardPrimitive.Trigger>
@@ -114,18 +115,18 @@ export const LinkPreview = ({
           <AnimatePresence>
             {isOpen && (
               <motion.div
-                initial={{ opacity: 0, y: 20, scale: 0.6 }}
+                initial={{ opacity: 0, scale: 0.6, y: 20 }}
                 animate={{
                   opacity: 1,
-                  y: 0,
                   scale: 1,
                   transition: {
-                    type: 'spring',
-                    stiffness: 260,
                     damping: 20,
+                    stiffness: 260,
+                    type: 'spring',
                   },
+                  y: 0,
                 }}
-                exit={{ opacity: 0, y: 20, scale: 0.6 }}
+                exit={{ opacity: 0, scale: 0.6, y: 20 }}
                 className="shadow-xl rounded-xl"
                 style={{
                   x: translateX,
@@ -133,6 +134,7 @@ export const LinkPreview = ({
               >
                 <Link
                   href={url}
+                  target="_blank"
                   className="block p-1 bg-white border-2 border-transparent shadow-sm rounded-xl hover:border-neutral-200 dark:hover:border-neutral-800"
                   style={{ fontSize: 0 }}
                 >
