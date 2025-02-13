@@ -361,7 +361,7 @@ export default function Home() {
 
   return (
     <div
-      className="h-screen w-screen snap-y snap-mandatory overflow-y-scroll"
+      className="h-screen w-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden"
       ref={homeRef}
     >
       {Sections.map((section) => section)}
