@@ -293,12 +293,12 @@ function Experience() {
           <div className="hidden sm:block">
             <p className="py-4 font-bold">key projects:</p>
             <ul className="list-disc list-inside">
-              <li>curriculum system</li>
+              <li>curriculum & learning management system</li>
               <li>achievement & badge system</li>
               <li>social platform</li>
               <li>live coding</li>
               <li>in app video conferencing</li>
-              <li></li>
+              <li>livestreaming</li>
             </ul>
           </div>
 
@@ -387,7 +387,7 @@ function Links() {
 
       <div className="pt-8">
         <h1 className="text-white text-2xl font-[family-name:var(--font-geist-mono)] text-center py-4">
-          my own blog posts
+          my blog posts
         </h1>
         <div className="flex flex-col items-center justify-center">
           <div className="flex flex-col justify-center pt-4">
