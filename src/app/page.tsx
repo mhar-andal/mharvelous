@@ -14,10 +14,31 @@ import {
 import Image from 'next/image'
 import { ArrowDown, Github, Linkedin } from 'lucide-react'
 import { useEffect, useRef, useState } from 'react'
+import { Carousel } from '@/components/shared/carousel'
+import { linkClassnames } from '@/components/shared/classnames'
 
 function Section() {
   return (
     <section className="w-screen h-screen snap-center relative snap-always snap-mandatory">
+      <div className="absolute top-0 left-0 w-full h-full flex justify-center pt-8">
+        <div className="text-white text-sm font-[family-name:var(--font-geist-mono)]">
+          <div className="font-bold mb-4">quick links</div>
+          <div className="flex flex-row gap-4">
+            <Link href="/#links" className="underline">
+              info
+            </Link>
+            <Link href="/#links" className="underline">
+              blog
+            </Link>
+            <Link href="/#bio" className="underline">
+              bio
+            </Link>
+            <Link href="/#codeverse" className="underline">
+              codeverse
+            </Link>
+          </div>
+        </div>
+      </div>
       <TextHoverEffect text={'MHAR ANDAL'} />
       <div className="absolute top-[60%] flex flex-col items-center justify-center w-full">
         <TextGenerateEffect
@@ -177,7 +198,10 @@ function Section() {
 
 function Description() {
   return (
-    <section className="flex flex-col items-center h-screen w-screen snap-center snap-always snap-mandatory pt-11">
+    <section
+      id="bio"
+      className="flex flex-col items-center h-screen w-screen snap-center snap-always snap-mandatory pt-11"
+    >
       <Image
         src="/mhar_avatar_photo.jpeg"
         alt="Mhar"
@@ -238,8 +262,18 @@ function Description() {
 }
 
 function Experience() {
+  const images = [
+    '/codeverse_product.png',
+    '/codeverse-studio.png',
+    '/image2.png',
+    '/image3.png',
+  ]
+
   return (
-    <section className="flex flex-col items-center h-screen w-screen snap-center snap-always snap-mandatory">
+    <section
+      id="codeverse"
+      className="flex flex-col items-center h-screen w-screen snap-center snap-always snap-mandatory"
+    >
       <div className="flex flex-col items-center justify-center pt-11">
         <h1 className="text-white text-2xl font-[family-name:var(--font-geist-mono)]">
           <motion.img
@@ -250,37 +284,59 @@ function Experience() {
           />
         </h1>
         <div className="text-white text-xs lg:text-sm font-[family-name:var(--font-geist-mono)] py-2 px-4 md:px-8 lg:px-32 max-w-4xl text-center">
-          <p className="pb-4">
-            Codeverse is an online platform and community where kids ages 6-13
-            bring ideas to life by creating their own apps and games. Powered by
-            KidScript — the world&apos;s first coding language created just for
-            kids — Codeverse teaches foundational coding concepts alongside
-            critical thinking, collaboration and creativity.
+          <p className="pb-4 font-bold">experience tldr:</p>
+          <p>
+            early founding engineer, led engineering & product to scale
+            platform, acquired by varsity tutors
           </p>
 
-          <p className="pt-6">
-            I joined Codeverse as an early engineer in 2018 during their Series
-            A round with a mission to build and scale the best interactive
-            coding studio&apos;s across the nation.
-          </p>
+          <div className="hidden sm:block">
+            <p className="py-4 font-bold">key projects:</p>
+            <ul className="list-disc list-inside">
+              <li>curriculum system</li>
+              <li>achievement & badge system</li>
+              <li>social platform</li>
+              <li>live coding</li>
+              <li>in app video conferencing</li>
+              <li></li>
+            </ul>
+          </div>
 
-          <p className="pt-6">
-            During the pandemic, the dream to scale the studios was put on hold.
-            I helped transition the product to an online platform, unlocking new
-            opportunities for kids to learn to code from anywhere in the world.
-          </p>
+          <hr className="my-4" />
+          <div className="text-xs">
+            <p className="pb-4">
+              Codeverse is an online platform and community where kids ages 6-13
+              bring ideas to life by creating their own apps and games. Powered
+              by KidScript — the world&apos;s first coding language created just
+              for kids — Codeverse teaches foundational coding concepts
+              alongside critical thinking, collaboration and creativity.
+            </p>
 
-          <div className="pt-6">
-            We built a platform with features like live coding, in app video
-            conferencing, social platform, and a large coding curriculum - we
-            got acquired by{' '}
-            <LinkPreview
-              url="https://varsitytutors.com"
-              className="font-bold bg-clip-text text-transparent bg-linear-to-br from-purple-500 to-pink-500"
-            >
-              Varsity Tutors
-            </LinkPreview>{' '}
-            to bring Codeverse to the k-12 school market.
+            <p className="pt-6">
+              I joined Codeverse as an early engineer in 2018 during their
+              Series A round with a mission to build and scale the best
+              interactive coding studio&apos;s across the nation.
+            </p>
+
+            <p className="pt-6">
+              During the pandemic, the dream to scale the in-person studios was
+              put on hold. I helped transition the product to an online
+              platform, unlocking new opportunities for kids to learn to code
+              from anywhere in the world.
+            </p>
+
+            <div className="pt-6">
+              We built a platform with features like live coding, in app video
+              conferencing, social platform, and a large coding curriculum. In
+              2022 we got acquired by{' '}
+              <LinkPreview
+                url="https://varsitytutors.com"
+                className="font-bold bg-clip-text text-transparent bg-linear-to-br from-purple-500 to-pink-500"
+              >
+                Varsity Tutors
+              </LinkPreview>{' '}
+              to bring Codeverse to the k-12 school market.
+            </div>
           </div>
 
           <div className="py-6">
@@ -292,36 +348,8 @@ function Experience() {
             </LinkPreview>
           </div>
 
-          <div className="grid lg:grid-cols-4 grid-cols-2 sm:grid-cols-3 gap-12">
-            <div className="w-full h-full flex items-center justify-center">
-              <motion.img
-                src="/codeverse_product.png"
-                alt="Codeverse"
-                whileHover={{ scale: 4 }}
-              />
-            </div>
-            <div className="w-full h-full flex items-center justify-center">
-              <motion.img
-                src="/codeverse-studio.png"
-                alt="Codeverse2"
-                whileHover={{ scale: 4 }}
-              />
-            </div>
-
-            <div className="w-full h-full flex items-center justify-center">
-              <motion.img
-                src="/image2.png"
-                alt="Codeverse2"
-                whileHover={{ scale: 4, y: -50 }}
-              />
-            </div>
-            <div className="w-full h-full flex items-center justify-center">
-              <motion.img
-                src="/image3.png"
-                alt="Codeverse2"
-                whileHover={{ scale: 4, y: -50 }}
-              />
-            </div>
+          <div className="w-full flex justify-center pt-8">
+            <Carousel images={images} width={600} height={400} />
           </div>
         </div>
       </div>
@@ -337,7 +365,7 @@ function Links() {
     >
       <div>
         <h1 className="text-white text-2xl font-[family-name:var(--font-geist-mono)] text-center">
-          Links
+          links
         </h1>
         <div className="flex flex-col items-center justify-center">
           <div className="grid grid-cols-2 gap-4 justify-center pt-4">
@@ -345,40 +373,50 @@ function Links() {
               url="https://github.com/mhar-andal"
               className="font-bold bg-clip-text text-transparent bg-linear-to-br from-purple-500 to-pink-500"
             >
-              GitHub
+              github
             </LinkPreview>
             <LinkPreview
               url="https://www.linkedin.com/in/mharandal/"
               className="font-bold bg-clip-text text-transparent bg-linear-to-br from-purple-500 to-pink-500"
             >
-              LinkedIn
+              linkedin
             </LinkPreview>
           </div>
         </div>
       </div>
 
-      {/* <div className="pt-8">
-        <h1 className="text-white text-2xl font-[family-name:var(--font-geist-mono)] text-center pt-4">
-          Posts
+      <div className="pt-8">
+        <h1 className="text-white text-2xl font-[family-name:var(--font-geist-mono)] text-center py-4">
+          my own blog posts
         </h1>
         <div className="flex flex-col items-center justify-center">
           <div className="flex flex-col justify-center pt-4">
-            <Link
-              href="/ai-voice-agents"
-              scroll
-              className="font-bold bg-clip-text text-transparent bg-linear-to-br from-purple-500 to-pink-500"
-            >
-              How I built a prototype for a Voice AI Assistant
+            <h3 className="text-white text-lg font-[family-name:var(--font-geist-mono)] pb-2">
+              ai
+            </h3>
+            <Link href="/ai-voice-agents" scroll className={linkClassnames}>
+              how I built a prototype for a voice AI assistant
             </Link>
-            <Link
-              href="/test"
-              className="font-bold bg-clip-text text-transparent bg-linear-to-br from-purple-500 to-pink-500"
-            >
-              Test
+            <Link href="/ai-10x-development" className={linkClassnames}>
+              10x developing with ai
             </Link>
+            <Link href="/test" className={linkClassnames}></Link>
+            <h3 className="text-white text-lg font-[family-name:var(--font-geist-mono)] pb-2">
+              product
+            </h3>
+            <Link href="/project-timelines" className={linkClassnames}>
+              estimating project timelines
+            </Link>
+            <Link href="/product-brainstorming" className={linkClassnames}>
+              product brainstorming
+            </Link>
+            <Link href="/" className={linkClassnames}></Link>
+            {/* <h3 className="text-white text-lg font-[family-name:var(--font-geist-mono)] pb-2">
+              frontend
+            </h3> */}
           </div>
         </div>
-      </div> */}
+      </div>
     </section>
   )
 }
