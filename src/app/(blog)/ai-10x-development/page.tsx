@@ -19,7 +19,7 @@ function VoiceAIAgent() {
         <span className="font-bold">mhar andal</span>
       </p>
       <div className="text-white text-sm font-[family-name:var(--font-geist-mono)] pt-6">
-        i've been using ai to develop for a while now.{' '}
+        i&apos;ve been using ai to develop for a while now.{' '}
         <LinkPreview url="https://www.cursor.com/" className={linkClassnames}>
           cursor
         </LinkPreview>{' '}
