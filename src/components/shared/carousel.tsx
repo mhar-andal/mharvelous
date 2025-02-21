@@ -57,7 +57,7 @@ export function Carousel({ images, width = 400, height = 300 }: CarouselProps) {
   return (
     <div
       style={{ height, width }}
-      className="relative overflow-hidden rounded-lg hidden sm:block"
+      className="relative overflow-hidden rounded-lg mx-8"
     >
       <AnimatePresence initial={false} custom={direction}>
         <motion.img

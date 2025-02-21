@@ -262,13 +262,6 @@ function Description() {
 }
 
 function Experience() {
-  const images = [
-    '/codeverse_product.png',
-    '/codeverse-studio.png',
-    '/image2.png',
-    '/image3.png',
-  ]
-
   return (
     <section
       id="codeverse"
@@ -347,11 +340,23 @@ function Experience() {
               Click here to see the product in action
             </LinkPreview>
           </div>
-
-          <div className="w-full flex justify-center pt-8">
-            <Carousel images={images} width={600} height={400} />
-          </div>
         </div>
+      </div>
+    </section>
+  )
+}
+
+function Photo() {
+  const images = [
+    '/codeverse_product.png',
+    '/codeverse-studio.png',
+    '/image2.png',
+    '/image3.png',
+  ]
+  return (
+    <section className="flex flex-col items-center h-screen w-screen snap-center snap-always snap-mandatory">
+      <div className="w-full flex justify-center pt-8">
+        <Carousel images={images} width={600} height={400} />
       </div>
     </section>
   )
@@ -425,7 +430,8 @@ const Sections = [
   <Section key={1} />,
   <Description key={2} />,
   <Experience key={3} />,
-  <Links key={4} />,
+  <Photo key={4} />,
+  <Links key={5} />,
 ]
 
 export default function Home() {
